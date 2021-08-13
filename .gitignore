@@ -1,7 +1,13 @@
 azur_lane_source_bytecode_decoded
 azur_lane_source_bytecode
-scripts32
-scripts32-dec
 test.sh
 *.lj
 *.lua.bytes
+__pycache__
+*.pyc
+
+scripts32
+scripts32-dec
+scripts32-EN
+scripts32-JP
+scripts32-CN
