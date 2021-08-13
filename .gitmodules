@@ -1,0 +1,12 @@
+[submodule "AzurLaneSourceLua"]
+	path = AzurLaneSourceLua
+	url = https://github.com/Drakomire/AzurLaneSourceLua
+[submodule "AzurLaneDecTools"]
+	path = AzurLaneDecTools
+	url = https://github.com/thebombzen/AzurLaneDecTools
+[submodule "AzurLaneLuaDec"]
+	path = AzurLaneLuaDec
+	url = https://github.com/jspzyhl/AzurLane5.1-bcDec
+[submodule "luajit-decompiler"]
+	path = luajit-decompiler
+	url = https://gitlab.com/znixian/luajit-decompiler

@@ -1,0 +1,7 @@
+azur_lane_source_bytecode_decoded
+azur_lane_source_bytecode
+scripts32
+scripts32-dec
+test.sh
+*.lj
+*.lua.bytes
