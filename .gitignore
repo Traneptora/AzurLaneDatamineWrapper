@@ -8,6 +8,4 @@ __pycache__
 
 scripts32
 scripts32-dec
-scripts32-EN
-scripts32-JP
-scripts32-CN
+*.script

@@ -6,9 +6,14 @@ else
     exit
 fi
 
+version=$(echo $2 | grep -Po '(?<=-)(.*)(?=-)')
+
 #Decode the AL script
 AzurLaneDecTools/uabdec ./$2 scripts32-dec
 python3 extract.py scripts32-dec $1
+
+rm -r azur_lane_source_bytecode_decoded/$1
+mkdir azur_lane_source_bytecode_decoded/$1
 
 # Decode the lua.bytes files
 for fs_dir in $(find azur_lane_source_bytecode/$1 -type d); do 
@@ -42,3 +47,12 @@ for fs_dir in $(find azur_lane_source_bytecode_decoded/$1 -name '*.lj') ;do
 
     python3 luajit-decompiler/main.py --file=$fs_dir --output=$output_dir --catch_asserts;
 done
+
+echo "Finished extracing files"
+
+#Push the updated lua files to git
+cd AzurLaneSourceLua
+git add $1
+git commit -m "[$1] AZ: $version"
+git push
+cd ..
